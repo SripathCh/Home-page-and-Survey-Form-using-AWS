@@ -1,0 +1,336 @@
+<!--  Name: Sripath Cherukuri
+      G-Number: G01395231
+      Course: SWE-645 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- mentioning the meta data -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- student survey form for tab title -->
+    <title>Student Survey Form</title>
+    
+    <!-- linking the bootstrap css to use bootstrap styles  -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- linking custom css file -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <!-- start of the body for the html page -->
+  <body>
+
+    <!-- creating a div for the whole survey form using container class from bootstrap -->
+    <div class="container mt-5">
+
+      <!-- starting a form using method POST -->
+      <form action="#" method="POST">
+        <h2>Student Survey Form</h2>
+        <div class="form-group">
+          
+          <!-- forming a row for first name and last name -->
+          <div class="row">
+            
+            <!-- taking up half space in the form width for first name using col-md-6 -->
+            <div class="col-md-6">
+              <label for="firstName">First Name *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your First Name"
+                required
+              />
+            </div>
+
+            <!-- for last name -->
+            <div class="col-md-6">
+              <label for="lastName">Last Name *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter your Last Name"
+                required
+              />
+            </div>
+          </div>
+
+
+          <!-- for street address -->
+          <label for="streetAddress">Street address *</label>
+          <input
+            type="text"
+            class="form-control"
+            id="streetAddress"
+            name="streetAddress"
+            placeholder="Enter your street address"
+            required
+          />
+
+
+          <!-- again dividing equal space for city, state -->
+          <div class="row">
+            <div class="col-md-6">
+              <label for="city">City *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                name="city"
+                placeholder="Enter city e.g. Fairfax"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="state">State *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="state"
+                name="state"
+                placeholder="Enter State e.g. Virginia"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- now for zip code and phone number -->
+          <div class="row">
+            <div class="col-md-6">
+              <label for="zip">Zip *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zip"
+                name="zip"
+                placeholder="Enter your 5-digit zipcode"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="phoneNum">Phone Number *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phoneNum"
+                name="phoneNum"
+                placeholder="Enter your Phone No"
+                required
+              />
+            </div>
+          </div>
+          
+          <!-- for email -->
+          <label for="email">E-mail *</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter your e-mail, e.g. sripath.cherukuri@gmail.com"
+            required
+          />
+
+          <!-- input for date of survey -->
+          <label for="firstName">Date of Survey *</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            required
+          />
+        </div>
+
+        <!-- another form group for other questions -->
+        <div class="form-group">
+          <label>What did you like most about the campus?</label><br />
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="likedStudents"
+              name="likedStudents"
+            />
+
+            <!-- checkbox buttons for the above question -->
+            <!-- option1 -->
+            <label class="form-check-label" for="likedStudents">Students</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="likedLocation"
+              name="likedLocation"
+            />
+            <!-- option2 -->
+            <label class="form-check-label" for="likedLocation">Location</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="likedCampus"
+              name="likedCampus"
+            />
+            <!-- option3 -->
+            <label class="form-check-label" for="likedCampus">Campus</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="likedAtmosphere"
+              name="likedAtmosphere"
+            />
+            <!-- option4 -->
+            <label class="form-check-label" for="likedAtmosphere"
+              >Atmosphere</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="likedDormRooms"
+              name="likedDormRooms"
+            />
+
+            <!-- option5 -->
+            <label class="form-check-label" for="likedDormRooms"
+              >Dorm Rooms</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="likedSports"
+              name="likedSports"
+            />
+
+            <!-- option6 -->
+            <label class="form-check-label" for="likedSports">Sports</label>
+          </div>
+          <!-- Add similar div blocks for other checkboxes -->
+        </div>
+
+        <!-- another form group for question and radio buttons -->
+
+        <!-- question -->
+        <div class="form-group">
+          <label>How did you become interested in the university?</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="interestFriends"
+              name="interestSource"
+              value="friends"
+            />
+            <!-- option1 -->
+            <label class="form-check-label" for="interestFriends"
+              >Friends</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="interestTelevision"
+              name="interestSource"
+              value="television"
+            />
+            <!-- option2 -->
+            <label class="form-check-label" for="interestTelevision"
+              >Television</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="interestInternet"
+              name="interestSource"
+              value="internet"
+            />
+            <!-- option3 -->
+            <label class="form-check-label" for="interestInternet"
+              >Internet</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              id="interestOther"
+              name="interestSource"
+              value="other"
+            />
+
+            <!-- option4 -->
+            <label class="form-check-label" for="interestOther">Other</label>
+          </div>
+        </div>
+
+
+        <!-- another form group other questions, raffle and additional comments -->
+        <div class="form-group">
+          <label for="recommend"
+            >How likely are you to recommend this school to other prospective
+            students?</label
+          >
+
+          <!-- options -->
+          <select class="form-control" id="recommend" name="recommend" required>
+            <option value="Very Likely">Very Likely</option>
+            <option value="Likely">Likely</option>
+            <option value="Unlikely">Unlikely</option>
+          </select>
+        </div>
+
+
+        <!-- raffle -->
+        <div class="form-group">
+          <label for="raffle"
+            >Raffle (Enter ten comma separated numbers from 1 to 100) </label
+          >
+          <!-- input box -->
+          <input type="text" class="form-control" id="raffle" name="raffle" />
+        </div>
+
+
+        <!-- additional comments -->
+        <div class="form-group">
+          <label for="comments">Additional Comments</label>
+          <textarea
+            class="form-control"
+            id="comments"
+            name="comments"
+            rows="4"
+          ></textarea>
+        </div>
+
+
+        <!-- submit and cancel buttons -->
+        <button type="Submit" class="btn btn-outline-success">Submit</button>
+        <button type="Cancel" class="btn btn-outline-danger">Cancel</button>
+      </form>
+    </div>
+
+    <!-- scripts for bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
