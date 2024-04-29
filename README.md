@@ -1,33 +1,38 @@
-# Home Page and Student Survey Form Using AWS
+###Home Page & Survey Form using AWS
 
-## Description
-This repository was originally developed for the SWE645 course assignment and includes two main components: a static homepage and a dynamic student survey form application. The homepage was hosted on AWS S3, and the survey form was deployed on AWS EC2. Currently, the AWS subscription has ended, and the links to these resources are inactive.
+## Overview
+This repository contains the artifacts for Homework 1 of the Component-based Software Development course, including a static home page and a dynamic survey form hosted on AWS services. Part 1 is hosted using AWS S3, and Part 2 is deployed on an AWS EC2 instance.
 
-## Previous Configuration
-### Part 1: Static Home Page on AWS S3
-- Utilized W3.CSS templates for enhanced aesthetics.
-- Included an error.html page to handle availability issues.
+## Links
+- **Part 1 - Static Home Page:** [sripathcherukuri-swe645.s3-website.us-east-2.amazonaws.com](http://sripathcherukuri-swe645.s3-website.us-east-2.amazonaws.com/)
+- **Part 2 - Dynamic Survey Form:** [3.133.91.79/part2/surveyform.html](https://3.133.91.79/part2/surveyform.html)
 
-### Part 2: Student Survey Form
-- Collected personal information, campus preferences, referral sources, likelihood of recommendation, and raffle entries through a web form.
-- Validated required fields and raffle entry formats.
+## Part 1: Static Home Page
+1. Create `index.html` and `error.html`.
+2. Apply a W3.CSS template to enhance the webpage design.
+3. Set up an Amazon S3 bucket for hosting:
+    - Ensure you have a free tier Amazon AWS account.
+    - Turn off "Block all public access" in the bucket settings.
+    - Enable static web hosting and upload the HTML files.
+    - Configure the bucket policy using appropriate JSON code.
+    - The `index.html` should display by default; `error.html` serves as a fallback.
 
-## General Setup and Replication
-If you need to set up this project again or replicate the environment, here are the general steps you would follow:
-
-### Requirements
-- An AWS account with access to S3 and EC2 services.
-- Local development environment with Eclipse EE and Tomcat for initial setup and testing.
-
-### Steps to Replicate
-1. **S3 Setup for Static Hosting:**
-   - Create an S3 bucket and enable static website hosting.
-   - Upload the index.html and error.html files to the bucket.
-   - Configure bucket permissions and policies for public access according to AWS guidelines.
-
-2. **EC2 Setup for Dynamic Web Application:**
-   - Provision an EC2 instance using the "Tomcat Certified by Bitnami" AMI from the AWS Marketplace.
-   - Deploy the WAR file for the survey application.
-   - Adjust the security group settings to allow HTTP and SSH traffic.
+## Part 2: Dynamic Survey Form
+1. Launch a free tier eligible EC2 instance using "Tomcat Certified by Bitnami" from AWS Marketplace.
+2. Configure the instance type as `t2.micro`.
+3. Create and download a new key-pair for SSH access.
+4. Establish an SSH connection:
+    ```bash
+    ssh -i filename.pem bitnami@your-public-ip-address
+    ```
+5. Transfer the `.war` file from your local machine to the EC2 instance:
+    ```bash
+    scp -i filename.pem path/to/filename.war bitnami@your-public-ip-address
+    ```
+6. Move the `.war` file to the `tomcat/webapps` directory on the EC2 instance:
+    ```bash
+    sudo mv /home/bitnami/filename.war tomcat/webapps
+    ```
+7. Access the survey form via the EC2 instance's public URL.
 
 Please note: As the AWS subscription has ended, the original deployment is no longer live. The instructions above are for archival and replication purposes.
