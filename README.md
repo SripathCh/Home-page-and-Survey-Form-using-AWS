@@ -1,4 +1,4 @@
-###Home Page & Survey Form using AWS
+# Home Page & Survey Form using AWS
 
 ## Overview
 This repository contains the artifacts for Homework 1 of the Component-based Software Development course, including a static home page and a dynamic survey form hosted on AWS services. Part 1 is hosted using AWS S3, and Part 2 is deployed on an AWS EC2 instance.
@@ -35,4 +35,6 @@ This repository contains the artifacts for Homework 1 of the Component-based Sof
     ```
 7. Access the survey form via the EC2 instance's public URL.
 
-Please note: As the AWS subscription has ended, the original deployment is no longer live. The instructions above are for archival and replication purposes.
+**Note**: 
+- This code and repository are for showcasing my projects and are not intended for external use.
+- As the AWS subscription has ended, the original deployment is no longer live.
